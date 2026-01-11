@@ -24,10 +24,10 @@
  INSERT INTO users(`email`,`name`,`password`,`active`,`last_login`,`register_date`) VALUES('admin@local.com','admin', '$2y$10$Uc2logJhqGF1LOG/FevQ9eLUbBJb23y9NdCEHvev.kMecdx.kuA2a', TRUE, NOW(),NOW());
  
 -- Give permissions to Super user
- INSERT INTO module_access(user_types_iduser_type,modules_idmodule,permissions_idpermission) VALUE (1,1,3);
- INSERT INTO module_access(user_types_iduser_type,modules_idmodule,permissions_idpermission) VALUE (1,2,3);
- INSERT INTO module_access(user_types_iduser_type,modules_idmodule,permissions_idpermission) VALUE (1,3,3);
- INSERT INTO module_access(user_types_iduser_type,modules_idmodule,permissions_idpermission) VALUE (1,4,3);
+ INSERT INTO module_access(roles_idrol,modules_idmodule,permissions_idpermission) VALUE (1,1,3);
+ INSERT INTO module_access(roles_idrol,modules_idmodule,permissions_idpermission) VALUE (1,2,3);
+ INSERT INTO module_access(roles_idrol,modules_idmodule,permissions_idpermission) VALUE (1,3,3);
+ INSERT INTO module_access(roles_idrol,modules_idmodule,permissions_idpermission) VALUE (1,4,3);
  
 -- Asign roles to base users
  INSERT INTO user_roles (users_iduser, roles_idrol ) VALUE (1, 1);
